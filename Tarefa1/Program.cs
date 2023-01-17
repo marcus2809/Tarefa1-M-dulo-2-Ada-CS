@@ -1,4 +1,8 @@
-﻿
+﻿var leao = new Leao("Alex", 'm', DateTime.Parse("02/09/2005"));
+leao.Alimentar();
+
+Console.WriteLine(leao.Idade);
+
 class Leao : Mamifero
 {
     public Leao(string nome, char sexo, DateTime dataDeNascimento)
@@ -85,7 +89,7 @@ class Morcego : Mamifero, IVoar
 
     public override void Comunicar()
     {
-        Console.WriteLine("...");
+        Console.WriteLine("farfalhando...");
     }
 
     public override void Movimentar()
@@ -141,7 +145,7 @@ class Cisne : Ave, IOviparo, IVoar, IAquatico
 
     public override void Comunicar()
     {
-        Console.WriteLine();
+        Console.WriteLine("arensando");
     }
 
     public override void Movimentar()
@@ -209,7 +213,7 @@ class DragaoDeComodo : Reptil, IOviparo
     }
     public override void Alimentar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Comendo carne...");
     }
 
     public void Botar()
@@ -224,7 +228,7 @@ class DragaoDeComodo : Reptil, IOviparo
 
     public override void Comunicar()
     {
-        Console.WriteLine("Chiando...");
+        Console.WriteLine("gecando...");
     }
 
     public override void Movimentar()
@@ -258,7 +262,7 @@ class Lontra : Mamifero, IAquatico
 
     public override void Comunicar()
     {
-        Console.WriteLine();
+        Console.WriteLine("guinchando...");
     }
 
     public override void Movimentar()
@@ -303,7 +307,7 @@ class Pinguim : Ave, IAquatico, IOviparo
 
     public override void Comunicar()
     {
-        Console.WriteLine();
+        Console.WriteLine("grasnando...");
     }
 
     public override void Movimentar()
@@ -331,22 +335,22 @@ class Coruja : Ave, IOviparo, IVoar
     }
     public override void Alimentar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Comendo pequenas aves..");
     }
 
     public void Botar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Botando ovo...");
     }
 
     public void Chocar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Chocando ovo");
     }
 
     public override void Comunicar()
     {
-        Console.WriteLine();
+        Console.WriteLine("chirriando...");
     }
 
     public override void Movimentar()
@@ -376,17 +380,17 @@ class Elefante : Mamifero
     }
     public override void Alimentar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Comendo folhas...");
     }
 
     public override void Comunicar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Berrando...");
     }
 
     public override void Movimentar()
     {
-        Console.WriteLine("Andando");
+        Console.WriteLine("Andando...");
     }
 }
 
@@ -416,22 +420,55 @@ class Jacare : Reptil, IOviparo, IAquatico
 
     public void Botar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Botando ovo...");
     }
 
     public void Chocar()
     {
-        Console.WriteLine();
+        Console.WriteLine("Chocando ovo...");
     }
 
     public override void Comunicar()
     {
-        Console.WriteLine();
+        Console.WriteLine("bramindo...");
     }
 
     public override void Movimentar()
     {
         Console.WriteLine("Nadando...");
+    }
+}
+
+// Para cadastro posterior
+class Ornitorrinco : Mamifero, IOviparo, IAquatico
+{
+    public bool ViveEmTerra { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public bool Mergulho { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public bool AguaDoce { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+    public override void Alimentar()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Botar()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Chocar()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Comunicar()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void Movimentar()
+    {
+        throw new NotImplementedException();
     }
 }
 
